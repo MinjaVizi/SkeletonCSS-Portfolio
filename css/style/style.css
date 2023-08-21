@@ -1,0 +1,249 @@
+/* Resetujemo margin i padding na svim elementima */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Globalni stilovi */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c5e0ff;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.headerr {
+    background-color: rgb(65, 65, 65);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    color: #a7a7a7;
+}
+
+.headerr .navbar {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.headerr .navbar li {
+    margin: 0 10px;
+}
+
+.headerr .navbar li a {
+    text-decoration: none;
+    color: #a7a7a7;
+}
+
+/* Stil za sekciju Pocetna */
+.Pocetna {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.Pocetna h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.Pocetna p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Stil za slike */
+.slika {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.portfolio-image-container {
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* Stil za footer */
+.Footer {
+    background-color: #333;
+    color: #a7a7a7;
+    padding: 20px 0;
+    text-align: center;
+    height: 60px;
+}
+
+/* Stil za sekciju Kontakt */
+.kontakt {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.kontakt h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.kontakt-forma {
+    max-width: 400px;
+    width: 100%;
+}
+
+.kontakt-forma label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #0074D9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Stil za sekciju Portfolio */
+.portfolio {
+    padding: 100px 0;
+    background-color: #c5e0ff;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.portfolio-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 5px solid #333;
+    margin-right: 1rem;
+}
+
+.portfolio-card .tekst {
+    flex: 1;
+    text-align: left;
+}
+
+.portfolio-card h2 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.portfolio-card p {
+    font-size: 1.7rem;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.portfolio-card a {
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .column-50 {
+        width: 100%;
+    }
+    .navbar-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+    .navbar.active {
+        display: flex;
+    }
+    .navbar li {
+        margin: 0;
+        padding: 10px 20px;
+    }
+    .navbar a {
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    .navbar a:hover {
+        color: #0074D9;
+    }
+    .navbar-toggler {
+        display: block;
+        cursor: pointer;
+    }
+    .navbar-toggler span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 6px 0;
+    }
+
+    .headerr {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .Pocetna {
+        padding: 50px 0;
+    }
+    .kontakt {
+        padding: 50px 0;
+    }
+    .portfolio-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .portfolio-card img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
